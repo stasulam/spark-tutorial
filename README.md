@@ -52,7 +52,7 @@ Notebook, którego celem jest wprowadzenie do [`MLLib`](https://spark.apache.org
 
 Notebook prezentuje sposób stosowania klas wykorzystywanych w *preprocessingu*, tj. `VectorAssembler`, `Binarizer`, `StringIndexer`, `OneHotEncoder`, etc. W sekcji dotyczącej modelowania wykorzystano klasę `LogisticRegression`. Następnie, poszukiwano optymalnych wartości *hyperparametrów* modelu z wykorzystaniem `CrossValidator` i `ParamGridBuilder`.
 
-Zaproponowaną miarą oceny *performance* modeli był błąd na zbiorze testowym mierzony jako $1 - \textrm{accuracy}$:
+Zaproponowaną miarą oceny *performance* modeli był błąd na zbiorze testowym mierzony jako `1 - accuracy`:
 
 * wypełnienie samymi zerami: `0.462161`,
 * regresja logistyczna na wszystkich zmiennych: `0.40878`,
