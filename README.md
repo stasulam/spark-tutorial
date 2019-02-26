@@ -42,3 +42,12 @@ taxi.select(udf_payment_type(taxi.payment_type)).show(10)
 
 Notebook, którego celem jest przygotowanie danych do modelowania. Zauważmy jednak, że proponowany sposób przygotowania zbioru danych, który zostanie wykorzystany na etapie modelowania, może implikować problem leaku informacyjnego przy niektórych metodach `feature engineering`. Np. wyznaczenie wartości kwantyli zmiennej `trip_miles` na całej tabeli - po dokonaniu podziału na zbiór *treningowy* i *testowy* - będzie przenosiło informację do zbioru *testowego*.
 
+## [`04_mllib_model_training`](https://github.com/stasulam/spark-tutorial/blob/notebooks/notebooks/03_data_preparation.ipynb)
+
+Notebook, którego celem jest wprowadzenie do [`MLLib`](https://spark.apache.org/docs/2.3.2/ml-guide.html). Podstawowe informacje dot. [`MLLib`](https://spark.apache.org/docs/2.3.2/ml-guide.html):
+
+* działa wyłącznie z danymi w postaci numerycznej,
+* instancje klas modeli `ML` wymagają definicji zmiennych objaśniających (w postaci nazwy będącej wynikiem zastosowania `VectorAssembler`) i zmiennej objaśnianej,
+* `API` zbliżone do konwencji stosowanej w `scikit-learn`, tj. `.fit`, `.transform`, etc.
+
+Notebook prezentuje sposób stosowania klas wykorzystywanych w *preprocessingu*, tj. `VectorAssembler`, `Binarizer`, `StringIndexer`, `OneHotEncoder`, etc. W sekcji dotyczącej modelowania wykorzystano klasę `LogisticRegression`. Następnie, poszukiwano optymalnych wartości *hyperparametrów* modelu z wykorzystaniem `CrossValidator` i `ParamGridBuilder`.
