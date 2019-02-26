@@ -4,7 +4,7 @@ Materiały ze szkolenia 26/02/19: *From small data in Python to Big Data model i
 
 # Notebooks
 
-## [`01_jupyter_intro`](https://github.com/stasulam/spark-tutorial/blob/notebooks/notebooks/01_jupyter_starter.ipynb)
+## [`01_jupyter_intro`](https://github.com/stasulam/spark-tutorial/blob/master/notebooks/01_jupyter_starter.ipynb)
 
 Notebook wprowadzający do Jupyter Notebooks (z przykładowymi typami wykorzystywanymi w Pythonie). Notebook kończy się zadaniem polegającym na implementacji funkcji zwracającej informacje o tym, czy podana liczba jest parzyta, czy nieparzysta.
 
@@ -16,7 +16,7 @@ def odd_or_even(number: int) -> str:
         return 'odd'
 ```
 
-## [`02_dataframes_api_walkthrough`](https://github.com/stasulam/spark-tutorial/blob/notebooks/notebooks/02_dataframes_api_walkthrough.ipynb)
+## [`02_dataframes_api_walkthrough`](https://github.com/stasulam/spark-tutorial/blob/master/notebooks/02_dataframes_api_walkthrough.ipynb)
 
 Notebook wprowadzający do `DataFrameAPI` w `pyspark`. Prezentuje sposoby wczytywania zbiorów danych (`SQL`, `csv`). Przedstawia podstawowe operacje, które możemy wykonywać na `DataFrameAPI`:
 
@@ -38,11 +38,11 @@ udf_payment_type = udf(payment_type, IntegerType())
 taxi.select(udf_payment_type(taxi.payment_type)).show(10)
 ```
 
-## [`03_data_preparation`](https://github.com/stasulam/spark-tutorial/blob/notebooks/notebooks/03_data_preparation.ipynb)
+## [`03_data_preparation`](https://github.com/stasulam/spark-tutorial/blob/master/notebooks/03_data_preparation.ipynb)
 
 Notebook, którego celem jest przygotowanie danych do modelowania. Zauważmy jednak, że proponowany sposób przygotowania zbioru danych, który zostanie wykorzystany na etapie modelowania, może implikować problem leaku informacyjnego przy niektórych metodach `feature engineering`. Np. wyznaczenie wartości kwantyli zmiennej `trip_miles` na całej tabeli - po dokonaniu podziału na zbiór *treningowy* i *testowy* - będzie przenosiło informację do zbioru *testowego*.
 
-## [`04_mllib_model_training`](https://github.com/stasulam/spark-tutorial/blob/notebooks/notebooks/04_mllib_model_training.ipynb)
+## [`04_mllib_model_training`](https://github.com/stasulam/spark-tutorial/blob/master/notebooks/04_mllib_model_training.ipynb)
 
 Notebook, którego celem jest wprowadzenie do [`MLLib`](https://spark.apache.org/docs/2.3.2/ml-guide.html). Podstawowe informacje dot. [`MLLib`](https://spark.apache.org/docs/2.3.2/ml-guide.html):
 
@@ -59,6 +59,6 @@ Zaproponowaną miarą oceny *performance* modeli był błąd na zbiorze testowym
 * regresja logistyczna po *feature engineering* (6 cech): `0.022286`,
 * regresja logistyczna po *feature engineering* i optymalizacji *hyperparameters*: `0.022286`.
 
-## [`05_pipelines`](https://github.com/stasulam/spark-tutorial/blob/notebooks/notebooks/05_pipelines.ipynb)
+## [`05_pipelines`](https://github.com/stasulam/spark-tutorial/blob/master/notebooks/05_pipelines.ipynb)
 
 Notebook, którego celem jest wprowadzenie do budowania `Pipeline` w `pyspark`. Powtórzono proces budowy modelu z poprzedniego notebooka z wykorzystaniem klasy `Pipeline` (dzięki temu możemy uniknąć problemu z leakiem informacyjnym, o którym wspominano wcześniej). Notebook został dodany poglądowo (bez egzekucji komórek). 
