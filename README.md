@@ -58,3 +58,7 @@ Zaproponowaną miarą oceny *performance* modeli był błąd na zbiorze testowym
 * regresja logistyczna na wszystkich zmiennych: `0.40878`,
 * regresja logistyczna po *feature engineering* (6 cech): `0.022286`,
 * regresja logistyczna po *feature engineering* i optymalizacji *hyperparameters*: `0.022286`.
+
+## [`05_pipelines`](https://github.com/stasulam/spark-tutorial/blob/notebooks/notebooks/05_pipelines.ipynb)
+
+Notebook, którego celem jest wprowadzenie do budowania `Pipeline` w `pyspark`. Powtórzono proces budowy modelu z poprzedniego notebooka z wykorzystaniem klasy `Pipeline` (dzięki temu możemy uniknąć problemu z leakiem informacyjnym, o którym wspominano wcześniej). Notebook został dodany poglądowo (bez egzekucji komórek). 
